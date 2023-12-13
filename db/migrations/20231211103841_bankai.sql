@@ -1,7 +1,7 @@
 -- migrate:up
 CREATE TABLE `users` (
   `id` integer PRIMARY KEY AUTO_INCREMENT,
-  `role` ENUM ('admin', 'user', 'moderator', 'delevery'),
+  `role` ENUM ('admin', 'user', 'moderator', 'delevery')
   `username` varchar(255),
   `firstname` varchar(255),
   `email` varchar(255),
@@ -133,7 +133,7 @@ CREATE TABLE `product_event` (
   PRIMARY KEY (`product_id`, `event_id`)
 );
 
-ALTER TABLE `product_event` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
+ALTER TABLE `product_event` ADD FOREIGN KEY (`product_id`) REFERENCES `product` (`id`); 
 
 ALTER TABLE `product_event` ADD FOREIGN KEY (`event_id`) REFERENCES `event` (`id`);
 
