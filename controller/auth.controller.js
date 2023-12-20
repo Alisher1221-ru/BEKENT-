@@ -86,7 +86,7 @@ async function login(req, res) {
         const hashedRefreshToken = hashSync(refreshToken, 1);
         db.query("UPDATE users SET refresh_token = ? WHERE id = ?", [
             hashedRefreshToken,
-            user.id,
+            user.id
         ]);
     } catch (err) {
         res.json({ error: "Error is users none " + err });

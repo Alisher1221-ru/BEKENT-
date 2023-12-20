@@ -7,7 +7,7 @@ function userGuard(...role) {
             }
             res.json('no')
         } catch (error) {
-            res.json({ error: "message is " + error.message });
+            res.json({ error: "message is" + error.message });
         }
     };
 }

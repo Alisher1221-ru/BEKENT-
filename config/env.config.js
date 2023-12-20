@@ -1,5 +1,5 @@
-import {config} from 'dotenv'
 import {cleanEnv, num, str} from 'envalid'
+import {config} from 'dotenv'
 config()
 
 let env = cleanEnv(process.env, {
